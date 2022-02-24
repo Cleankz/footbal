@@ -6,7 +6,12 @@ def Football(F,N):
             dif.append(F[i])
     if len(dif) == 2:
         return True
+    elif len(dif) == 0  or len(dif) == 1:
+        return False
+    elif len(dif) == N:
+        return False
     else:
+        dif.sort(reverse = True)
         dif.sort()
         s1 = str(dif)
         s2 = str(reverse)
